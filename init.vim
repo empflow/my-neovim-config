@@ -50,10 +50,14 @@ vim.keymap.set("n", "<C-]>", function() ui.nav_next() end)
 END
 
 " NERDTree remaps
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <C-f> :NERDTreeToggle<cr>
+nnoremap <C-k> :NERDTreeFocus<cr>
+
+" NERDTree config
+" Start NERDTree and put the cursor back in the other window.
+autocmd VimEnter * NERDTree | wincmd p
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " Telescope remaps
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
