@@ -11,7 +11,6 @@ call plug#begin()
 
 Plug 'tpope/vim-surround' " Surround things with braces
 Plug 'nvim-lualine/lualine.nvim' " Bottom status bar 
-Plug 'preservim/nerdtree' " Filetree
 Plug 'tpope/vim-commentary' " For commenting gcc & gc
 Plug 'ap/vim-css-color' " CSS color preview
 Plug 'rafi/awesome-vim-colorschemes' " Colorschemes
@@ -24,7 +23,7 @@ Plug 'hrsh7th/nvim-cmp' " Autocompletion
 Plug 'nvim-lua/plenary.nvim'
 Plug 'hrsh7th/cmp-nvim-lsp' " Autocompletion
 Plug 'nvim-tree/nvim-web-devicons' " Icons  
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.2' }
+Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'run': ':TSUpdate'}
 Plug 'theprimeagen/harpoon'
 
@@ -48,16 +47,6 @@ vim.keymap.set("n", "<C-[>", function() ui.nav_prev() end)
 vim.keymap.set("n", "<C-]>", function() ui.nav_next() end)
 
 END
-
-" NERDTree remaps
-nnoremap <C-f> :NERDTreeToggle<cr>
-nnoremap <C-k> :NERDTreeFocus<cr>
-
-" NERDTree config
-" Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " Telescope remaps
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
