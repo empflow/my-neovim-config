@@ -1,3 +1,2 @@
 require("empflow")
-print("hello")
 
