@@ -23,6 +23,4 @@ return require('packer').startup(function(use)
 	use('theprimeagen/harpoon')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
-	-- this is a test change
-	-- lsfdjksldkfj
   end)
