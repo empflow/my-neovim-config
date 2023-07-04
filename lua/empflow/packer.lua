@@ -54,4 +54,14 @@ return require('packer').startup(function(use)
             vim.g.qs_highlight_on_keys = { 'f', 'F', 't', 'T' }
         end
     }
+    use {
+        'preservim/nerdtree',
+        cmd = 'NERDTree | wincmd p',
+        setup = function()
+            vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeToggle<CR>', { noremap = true })
+        end
+    }
+    use {
+        'ryanoasis/vim-devicons'
+    }
 end)
