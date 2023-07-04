@@ -24,7 +24,6 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]) -- replace the currect word with something (globally)
-vim.keymap.set("n", "<leader>re", [[:%s/string_to_replace/new_string/gc]])
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/empflow/packer.lua<CR>"); -- go to packer.lua
 vim.keymap.set("n", "<leader>n", [[:NvimTreeToggle<CR>]]) -- toggle NvimTree
@@ -34,3 +33,4 @@ vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
+
