@@ -57,7 +57,6 @@ return require('packer').startup(function(use)
     use {
         'nvim-tree/nvim-tree.lua',
     }
-    use {
-        'kyazdani42/nvim-web-devicons',     -- optional
-    }
+    use ('kyazdani42/nvim-web-devicons')
+    use ("tpope/vim-surround")
 end)
