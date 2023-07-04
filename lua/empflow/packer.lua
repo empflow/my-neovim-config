@@ -55,13 +55,9 @@ return require('packer').startup(function(use)
         end
     }
     use {
-        'preservim/nerdtree',
-        cmd = 'NERDTree | wincmd p',
-        setup = function()
-            vim.api.nvim_set_keymap('n', '<leader>n', ':NERDTreeToggle<CR>', { noremap = true })
-        end
+        'nvim-tree/nvim-tree.lua',
     }
     use {
-        'ryanoasis/vim-devicons'
+        'kyazdani42/nvim-web-devicons',     -- optional
     }
 end)
