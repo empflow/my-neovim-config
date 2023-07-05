@@ -57,6 +57,7 @@ return require('packer').startup(function(use)
     use {
         'nvim-tree/nvim-tree.lua',
     }
-    use ('kyazdani42/nvim-web-devicons')
-    use ("tpope/vim-surround")
+    use('kyazdani42/nvim-web-devicons')
+    use("tpope/vim-surround")
+    use { "akinsho/toggleterm.nvim", tag = '*' }
 end)
