@@ -7,6 +7,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- ctrl + u half screen jumping
 vim.keymap.set("n", "n", "nzzzv")       -- keeps cursor in the middle while searching
 vim.keymap.set("n", "N", "Nzzzv")       -- same as above
 
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 vim.keymap.set("x", "<leader>p", [["_dP]]) -- prevent losing paste buffer when highlighing a word and replacing it with p
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]]) -- copy into system clipboard (use <leader>yy)
 vim.keymap.set("n", "<leader>Y", [["+Y]])        -- same as above (use <leader>Y, copies everything from the currect cursor position till the end of the line)
