@@ -12,4 +12,3 @@ nvimTree.setup({
     dotfiles = false,
   },
 })
-
