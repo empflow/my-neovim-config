@@ -7,6 +7,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") -- ctrl + u half screen jumping
 vim.keymap.set("n", "n", "nzzzv")       -- keeps cursor in the middle while searching
 vim.keymap.set("n", "N", "Nzzzv")       -- same as above
 
+-- move selected code blocks
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
