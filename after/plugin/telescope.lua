@@ -8,6 +8,6 @@ end)
 
 telescope.setup({
   defaults = {
-    file_ignore_patterns = { "node_modules", "package.json", "package-lock.json" }
+    file_ignore_patterns = { "node_modules" }
   }
 })
